@@ -1,4 +1,3 @@
-import math
 import scipy.spatial as sp
 import operator
 
@@ -37,5 +36,5 @@ def getLabels(neighborsList):
             resultLabels[label] += 1
         else:
             resultLabels[label] = 1
-    sortedLabels = sorted(resultLabels.iteritems(), key=operator.itemgetter(1), reverse=True)
-    return sortedLabels[0][0]
+    sortedLabels = sorted(resultLabels.__iter__(), key=operator.itemgetter(1))
+    return sortedLabels[0]

@@ -12,7 +12,8 @@ class dataOperations:
 
     def removeLabels(self, dataArray):
         dataArrayWithoutLabels = []
-        for x in range(len(dataArray)):
-            dataArrayWithoutLabels.append(x[len(x) - 1])
+        for item in dataArray:
+            dataArrayWithoutLabels.append(item[0:len(item)-1])
+        return np.array(dataArrayWithoutLabels)
         dataArrayWithoutLabels = np.array(dataArrayWithoutLabels)
         return dataArrayWithoutLabels
