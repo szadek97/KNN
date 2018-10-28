@@ -21,6 +21,13 @@ class kNN:
             knownLabelsList.append(getLabels(neighborsList))
         return knownLabelsList
 
+    def score(self, testingData, labels):
+        correct = 0
+        for i in range(len(testingData)):
+            data = testingData[i]
+            if data[4] == labels[i]:
+                correct += 1
+        return (correct/len(testingData))*100
 
 def getLabels(neighborsList):
     resultLabels = {}
