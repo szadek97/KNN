@@ -17,3 +17,9 @@ class dataOperations:
         return np.array(dataArrayWithoutLabels)
         dataArrayWithoutLabels = np.array(dataArrayWithoutLabels)
         return dataArrayWithoutLabels
+
+    def getLabels(self, array):
+        newArr = []
+        for item in array:
+            newArr.append(item[len(item) - 1])
+        return np.array(newArr)
